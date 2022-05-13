@@ -1,0 +1,17 @@
+commmands after creating database in xampp
+
+CREATE TABLE student(
+    Id int PRIMARY KEY,
+    Name varchar(21),
+    DOB date,
+    Father_Name varchar(32)
+    );
+
+
+
+CREATE TABLE marks (
+    id int,
+    Subject varchar(32),
+    Marks int,
+    FOREIGN KEY (id) REFERENCES student(Id)
+    );

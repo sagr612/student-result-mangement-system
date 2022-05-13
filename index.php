@@ -1,7 +1,7 @@
 <?php
 require_once 'includes/header.php';
 ?>
-
+ 
  
 <div>
     <p> Get your result here  </p>
