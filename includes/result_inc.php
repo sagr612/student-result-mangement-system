@@ -1,9 +1,8 @@
-
 <?php
 
 if(isset($_POST['submit'])){
     require 'database.php';
-    require '../vendor/autoload.php';
+   
     $id=$_POST['id'];
 
     if( empty($id) ){
@@ -59,11 +58,8 @@ if(isset($_POST['submit'])){
                 $temp.= "Total Marks : ".$totalMarks."<br>";
                 $percent=($totalMarks*100)/($totalSubjects*100);
                 $temp.="Percentage : ".number_format($percent,2)."<br>";
-                $mpdf=new \Mpdf\Mpdf();
-                $mpdf->WriteHTML($temp);
-                $file=time().".pdf";
-                $mpdf->output($file,'D');
-                header("Location: ../index.php"); 
+                echo $temp;
+                // header("Location: ../index.php"); 
 
                
                 exit();
